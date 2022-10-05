@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Bootstrap link -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/b14b1e8f9c.js" crossorigin="anonymous"></script>
+                 <!-- Local links -->
+        <!-- Font Link -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;500;700&family=Open+Sans:wght@400;700&family=Rokkitt:wght@700&family=Space+Mono&display=swap" rel="stylesheet">
+        <!-- Local links -->
+        <link rel="stylesheet" href="assets/css/log-in-form.css" />
+        <!-- Queries for Login form will be included in the basic css file -->
+        <link rel="stylesheet" href="assets/css/general.css" />
+        <link rel="stylesheet" href="assets/css/general-queries.css" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <script defer src="assets/scripts/log-in-form.js"></script>
+        <script defer src="assets/scripts/general.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <title>Retro VG</title>
+      </head>
+<body>
+      
+
+
+       
+        <!--Needed: Study OAuth client for actual social logins-->
+        <!--Needed: Check password length verification-->
+
+
+          <!-- First image on flip page -->
+
+        <div class="container">
+          <input type="checkbox" id="flip">
+          <div class="cover">
+            <div class="front">
+              <img src="assets/images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg" alt="">
+              <div class="text">
+                <span class="text-1">Player 1: <br>Press start<br>to continue</span>
+                
+              </div>
+            </div>
+
+            <!-- Second image after flip for sign up -->
+            <div class="back">
+              <img class="backImg" src="assets/images/snese.jpeg" alt="">
+              <div class="text">
+                <span class="text-1">Let's start gaming<br>Press start to continue</span>
+               
+              </div>
+            </div>
+          </div>
+
+          <!-- Log in form-->
+          <div class="forms">
+              <div class="form-content">
+                <div class="login-form">
+                  <div class="title">Login</div>
+                <form action="#">
+                  <div class="input-boxes">
+                    <div class="input-box">
+
+                      <!-- Email box-->
+                      <i class="fas fa-envelope"></i>
+                      <input type="text" placeholder="Enter your email" required>
+                    </div>
+
+                    <!-- Password box-->
+                    <div class="input-box">
+                      <i class="fas fa-lock"></i>
+
+ <!-- Toggle viewable password 1st time function-->
+                      <input type="password" placeholder="Enter your password" 
+                      id="myInput"required>
+                     <span class="eye" onclick="myFunction()">
+                      <i id="hide1" class="fa fa-eye"></i>
+                      <i id="hide2" class="fa fa-eye-slash"></i>
+
+                     </span>
+                    </div>
+
+                    <!-- Forgot password -NON WORKABLE- -->
+                    <div class="text"><a href="#">Forgot password?</a></div>
+                    <div class="button input-box">
+                      <!-- Submit button-->
+                      <input type="submit" value="Start">
+                    </div>
+                    <div class="text sign-up-text">Don't have an account? <label for="flip">Sign up now</label></div>
+                     <!-- Socials log in -NON WORKABLE - GETTING O-AUTH-->
+                    <div class="text sign-up-text">Or log in using your socials</div>
+                    <div class="sci">
+               
+                      <a href='#'><i class="fa fa-facebook-f"></i></a>
+                      <a href='#'><i class="fa fa-twitter"></i></a>
+                      <a href='#'><i class="fa fa-instagram"></i></a>   
+                  </div>
+      
+                  </div>
+              </form>
+            </div>
+
+            <!--Sign up form after flip-->
+              <div class="signup-form">
+                <div class="title">Sign up</div>
+              <form action="#">
+                  <div class="input-boxes">
+                    <div class="input-box">
+                      <i class="fas fa-user"></i>
+                      <!-- Enter Name-->
+                      <input type="text" placeholder="Enter your name" required>
+                    </div>
+                     <!-- Enter email-->
+                    <div class="input-box">
+                      <i class="fas fa-envelope"></i>
+                      <input type="text" placeholder="Enter your email" required>
+                    </div>
+                     <!-- Enter password-->
+                    <div class="input-box">
+                      <i class="fas fa-lock"></i>
+
+<!-- Toggle viewable password 2nd time function-->
+                      <input type="password" placeholder="Enter your password" 
+                      id="myInput2"required>
+                     <span class="eye" onclick="myFunction2()">
+                      <i id="hide3" class="fa fa-eye"></i>
+                      <i id="hide4" class="fa fa-eye-slash"></i>
+                     </span>                  
+                    </div>
+
+                    <!-- Submit button-->
+                    <div class="button input-box">
+                      <input type="submit" value="Start">
+                    </div>
+                    <div class="text sign-up-text">Already have an account? <label for="flip">Log in now</label></div>
+                    <!-- Socials log in-->
+                    <div class="text sign-up-text">Or log in using your socials</div>
+                    <div class="sci">
+               
+                      <a href='#'><i class="fa fa-facebook-f"></i></a>
+                      <a href='#'><i class="fa fa-twitter"></i></a>
+                      <a href='#'><i class="fa fa-instagram"></i></a>
+                  </div>
+                  </div>
+            </form>
+          </div>
+          </div>
+          </div>
+        </div>
+      
+
+<!-- 1st Javascript function for viewable password toggle-->
+<script>
+  function myFunction() {
+    var x = document.getElementById("myInput");
+    var y = document.getElementById("hide1");
+    var z = document.getElementById("hide2");
+
+    if(x.type === 'password') {
+      x.type = "text";
+      y.style.display = "block";
+      z.style.display = "none";
+    }
+
+    else {
+      x.type = "password";
+      y.style.display = "none";
+      z.style.display = "block";
+    }
+  }
+</script>
+
+<!-- 2ndst Javascript function for viewable password toggle-->
+  <script>
+  function myFunction2() {
+    var a = document.getElementById("myInput2");
+    var b = document.getElementById("hide3");
+    var c = document.getElementById("hide4");
+
+    if(a.type === 'password') {
+      a.type = "text";
+      b.style.display = "block";
+      c.style.display = "none";
+    }
+
+    else {
+      a.type = "password";
+      b.style.display = "none";
+      c.style.display = "block";
+    }
+  }
+  
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" 
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- End of mobile Navbar -->
+
+</body>
+</html>

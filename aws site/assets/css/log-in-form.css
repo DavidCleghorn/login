@@ -1,0 +1,337 @@
+/* Queries for Login form will be included in the basic css file */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap");
+*{
+  box-sizing: border-box;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  
+  
+}
+body {
+  align-items: center;
+  background: #8c64cb;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.container {
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  height: 100%;
+  max-height: 1000px;
+  max-width: 1000px;
+  padding: 40px 30px;
+  perspective: 2700px;
+  position: relative;
+  width: 100%;  
+}
+
+/* Main image covers */
+.container .cover {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 50%;
+  z-index: 98; 
+}
+
+/* Cover rotation */
+.container #flip:checked ~ .cover {
+  backface-visibility: hidden;
+  -webkit-transform:rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg) translateZ(1px);  
+  -webkit-backface-visibility: hidden;
+  will-change: transform; 
+}
+
+ .container .cover .front,
+ .container .cover .back {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Cover rotation */
+.cover .back {
+  backface-visibility: hidden;
+  -webkit-transform:rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg) translateZ(1px);  
+  will-change: transform;
+}
+
+.container .cover::before,
+.container .cover::after {
+  content: '';
+  height: 100%;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%; 
+  z-index: 12;
+}
+
+/* Cover rotation */
+.container .cover::after{
+  backface-visibility: hidden;
+  opacity: 0.3;
+  -webkit-transform:rotateY(180deg) translateZ(1px);
+  -moz-transform: rotateY(180deg) translateZ(1px);
+  -ms-transform: rotateY(180deg) translateZ(1px);
+  -o-transform: rotateY(180deg) translateZ(1px);
+  transform: rotateY(180deg) translateZ(1px); 
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+}
+
+.container .cover img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;  
+  z-index: 10;
+}
+
+/* Main text*/
+.container .cover .text {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 130;
+  justify-content: center;
+}
+
+/* Text over image with shadow to see more clearly */
+.cover .text .text-1,
+.cover .text .text-2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+/* Did not use a smaller font, but may use later when updated*/
+.cover .text .text-2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.container .forms {
+  background: #fff;
+  height: 100%;
+  width: 100%; 
+}
+
+.container .form-content {
+  align-items: center;
+  display: flex; 
+  justify-content: space-between;
+}
+
+.form-content .login-form,
+.form-content .signup-form {
+  width: calc(100% / 2 - 25px);
+}
+
+.forms .form-content .title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 500;
+  position: relative;
+}
+
+.forms .form-content .title:before {
+  background: #8c64cb;
+  bottom: 0;
+  content: '';
+  height: 3px;
+  left: 0;
+  position: absolute;
+ width: 25px; 
+}
+
+.forms .signup-form  .title:before {
+  width: 20px;
+}
+
+.forms .form-content .input-boxes {
+  margin-top: 30px;
+}
+
+.forms .form-content .input-box {
+  align-items: center;
+  display: flex; 
+  height: 50px;
+  margin: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+.form-content .input-box input {
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  font-size: 16px;
+  font-weight: 500;
+  height: 100%;
+  outline: none;
+  padding: 0 30px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* Input of info */
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
+  border-color: #8c64cb;
+}
+
+.form-content .input-box i {  
+  color: #8c64cb;
+  font-size: 17px;
+  position: absolute;
+}
+
+/* Text style and size when completing form */
+.forms .form-content .text {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.forms .form-content .text a {
+  text-decoration: none;
+}
+
+.forms .form-content .text a:hover {
+  text-decoration: underline;
+}
+
+.forms .form-content .button {
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* initial button color and type */
+.forms .form-content .button input {
+  background: #b8aaee;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.4s ease;
+}
+
+/* change button */
+.forms .form-content .button input:hover {
+  background: #8c64cb;
+}
+
+.forms .form-content label {
+  color: #8c64cb;
+  cursor: pointer;
+}
+
+/* Effeccts for 'enter info'*/
+.forms .form-content label:hover {
+  text-decoration: underline;
+}
+
+/* Completion text*/
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text {
+ margin-top: 25px;
+  text-align: center;
+}
+
+.container #flip {
+  display: none;
+  
+}
+
+
+/* Social media info */
+
+.sci
+{
+     margin-top: 20px;
+     text-align: center;
+     
+}
+
+ .sci a
+{
+  color: black;
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  margin: 10px;
+  position: relative;
+    text-decoration: none; 
+    transition: color 0.4s;
+    transition: 0.5s;
+     
+     
+}
+  
+.sci a:hover
+{
+    color: #8c64cb;
+    transform: translateY(-10px);
+}
+
+/* Password eye toggle */
+.eye {
+  right: 32px;
+  transform: translate(0, -91%);
+  position: absolute;
+  cursor: pointer
+}
+
+#hide1 {
+  display: none;
+}
+
+
+#hide3 {
+  display: none;
+}
+
+/* Size control */
+@media (max-width: 730px) {
+  .container .cover{
+    display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+    width: 100%;
+  }
+  .form-content .signup-form{
+    display: none;
+  }
+  .container #flip:checked ~ .forms .signup-form{
+    display: block;
+  }
+  .container #flip:checked ~ .forms .login-form{
+    display: none;
+  }
+}
+
